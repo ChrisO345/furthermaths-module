@@ -1,7 +1,7 @@
 """Trigonometric Functions"""
-from factorial import factorial
-from angle_units import radians
-from square_root import sqrt
+from .factorial import factorial
+from .angle_units import radians
+from .square_root import sqrt
 
 
 def sin(deg: float, accuracy: int = 18, rounded_values_count: int = 10) -> float:

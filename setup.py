@@ -17,7 +17,7 @@ packages = [
 setup(
     name='furthermaths',
     url="",
-    version="0.1",
+    version="0.1.1",
     packages=packages,
     license='MIT',
     description='An extension to the pre-installed and packaged python default maths library',

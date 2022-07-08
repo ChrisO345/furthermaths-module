@@ -1,5 +1,5 @@
 """Degrees Radians Gradians"""
-import constants
+tau = 6.28318530718
 
 
 def degrees(x, source="rad"):
@@ -11,7 +11,7 @@ def degrees(x, source="rad"):
     :return:
     """
     if source == "rad":
-        return (x * 360) / constants.tau
+        return (x * 360) / tau
     elif source == "grad":
         return (x * 360) / 400
     raise SyntaxError()
@@ -26,9 +26,9 @@ def radians(x, source="deg"):
     :return:
     """
     if source == "deg":
-        return (x * constants.tau) / 360
+        return (x * tau) / 360
     elif source == "grad":
-        return (x * constants.tau) / 400
+        return (x * tau) / 400
     raise SyntaxError()
 
 
@@ -41,7 +41,7 @@ def gradians(x, source="deg"):
     :return:
     """
     if source == "rad":
-        return (x * 400) / constants.tau
+        return (x * 400) / tau
     elif source == "deg":
         return (x * 400) / 360
     raise SyntaxError()

@@ -1,5 +1,5 @@
 """Exponential"""
-from constants import e
+e = 2.71828182846
 
 
 def exp(x) -> float:
