@@ -21,5 +21,30 @@ def is_arithmetic(series: list) -> bool:
     return True
 
 
+def arithmetic(nth_term: int, start: float | int, diff: float | int) -> list:
+    """
+    Finds the nth term of an arithmetic progression
+
+    :param nth_term:
+    :param start:
+    :param diff:
+    :return:
+    """
+    if not isinstance(nth_term, int):
+        raise ValueError("Nth term must be an integer")
+    if not isinstance(start, (int, float)):
+        raise ValueError("Start term must be a real number")
+    if not isinstance(diff, (int, float)):
+        raise ValueError("Difference must be a real number")
+    if nth_term < 1:
+        raise ValueError("Nth term must be greater than 0")
+    if diff == 0:
+        raise ValueError("Difference cannot be 0")
+    series = [start]
+    for index in range(nth_term - 1):
+        series.append(series[index] + diff)
+    return series
+
+
 if __name__ == '__main__':
     print(is_arithmetic([2, 4, 6, 8]))
