@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: furthermaths
+Version: 0.1
+Summary: An extension to the pre-installed and packaged python default maths library
+Home-page: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+UNKNOWN
+
