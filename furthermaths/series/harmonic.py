@@ -1,4 +1,4 @@
-"""Harmonic Series"""
+"""Harmonic Series"""  # what is a harmonic progression?
 
 
 def is_harmonic(series: list) -> bool:
@@ -24,3 +24,22 @@ def is_harmonic(series: list) -> bool:
         if rec_series[index + 1] - rec_series[index] != common_diff:
             return False
     return True
+
+
+def harmonic(nth_term: int) -> list:  # what does this even mean?
+    """
+    Finds the nth term of a harmonic progression
+
+    :param nth_term:
+    :return
+    """
+    if nth_term == "":
+        return []
+    series: list = []
+    for temp in range(int(nth_term)):
+        series.append(f"1/{temp + 1}" if series else "1")
+    return series
+
+
+if __name__ == '__main__':
+    print(harmonic(5))

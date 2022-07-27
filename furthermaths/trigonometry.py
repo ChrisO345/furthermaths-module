@@ -101,6 +101,21 @@ def cot(deg: float, accuracy: int = 18, rounded_values_count: int = 10) -> float
     return round(1 / tangent, rounded_values_count)
 
 
+def sinc(deg: float, accuracy: int = 18, rounded_values_count: int = 10) -> float:
+    """
+    Gives the value of sin(x) / x for an angle in degrees
+
+    :param deg:
+    :param accuracy:
+    :param rounded_values_count:
+    :return:
+    """
+    if deg == 0:
+        return 1
+    sine = sin(deg, accuracy, rounded_values_count)
+    return round(sine / deg, rounded_values_count)
+
+
 if __name__ == '__main__':
     print(sin(90))
     print(cos(90))
