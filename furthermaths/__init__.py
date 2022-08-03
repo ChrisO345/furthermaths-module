@@ -5,6 +5,7 @@ from .add_sub import *
 from .angle_units import *
 from .averages import *
 from .cube_root import *
+from .equality import *
 from .eratosthenes import *
 from .exponential import *
 from .factorial import *
