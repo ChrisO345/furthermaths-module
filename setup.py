@@ -12,6 +12,8 @@ packages = [
     "furthermaths",
     "furthermaths.series",
     "furthermaths.complex",
+    "furthermaths.matrices",
+    "furthermaths.vectors",
 ]
 
 setup(
