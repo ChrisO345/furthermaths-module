@@ -6,10 +6,13 @@ from .angle_units import *
 from .area import *
 from .averages import *
 from .cube_root import *
+from .digit_sum import *
+from .distance import *
 from .equality import *
 from .eratosthenes import *
 from .exponential import *
 from .factorial import *
+from .perfect_numbers import *
 from .perm_combs import *
 from .prime_factors import *
 from .rounding import *
