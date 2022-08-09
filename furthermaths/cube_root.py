@@ -1,12 +1,12 @@
 """nth Root"""
 
 
-def root(n, p=2):
+def root(n, p=2) -> float:
     """
     Finds the nth root of a number
 
-    :param n:
-    :param p:
+    :param n: number
+    :param p: power n is raised to
     :return:
     """
     start = 0
