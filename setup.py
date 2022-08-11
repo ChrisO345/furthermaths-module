@@ -14,6 +14,7 @@ packages = [
     "furthermaths.complex",
     "furthermaths.matrices",
     "furthermaths.vectors",
+    "furthermaths.distributions",
 ]
 
 setup(
