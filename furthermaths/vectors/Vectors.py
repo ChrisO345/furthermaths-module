@@ -13,6 +13,16 @@ class Vector:
     def __repr__(self):
         return f"Vector[{', '.join(str(x) for x in self.values)}]"
 
+    def __len__(self):
+        return self.dimension
+
+    def __abs__(self):
+        return sum(i**2 for i in values)**0.5
+
+    def __contains__(self, _value):
+        if _value in self.values:
+            return True
+        return False
 
 if __name__ == '__main__':
     x = Vector(2, 5, 7)
