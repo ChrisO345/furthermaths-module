@@ -1,4 +1,4 @@
-"""Euclidian Distance"""
+"""Euclidean Distance"""
 
 
 def dist(*args):
