@@ -1,4 +1,4 @@
-"""Logarithm Functions"""
+"""Logarithm Functions -> approximation functions"""
 
 
 def log10(x):
@@ -39,7 +39,32 @@ def log(x, b):
     :param b: The base of the logarithm.
     :return: The base b logarithm of x.
     """
-    pass
+    if b == 0:
+        return 1
+
+    end = x
+
+    prev = 0
+
+    accuracy = 1
+
+    e = 0.0000001
+    while True:
+        start = prev + accuracy
+        _curr = b ** start
+
+        if _curr >= end:
+            error = _curr - end
+        else:
+            error = end - _curr
+
+        if error <= e:
+            return start
+
+        if _curr > end:
+            accuracy /= 10
+        else:
+            prev = start
 
 
 def ln(x):
@@ -64,4 +89,7 @@ def log_e(x):
 
 # TODO complete these functions
 if __name__ == '__main__':
-    pass
+    print(log(32, 2))
+    print(log(100, 10))
+    print(log(2937846, 3))
+    print(log(0.5, 6))

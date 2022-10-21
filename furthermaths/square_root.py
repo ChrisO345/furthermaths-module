@@ -57,4 +57,3 @@ if __name__ == '__main__':
     print(sqrt(0.00001))
     print(sqrt(0.000001))
     print(sqrt(0.0000001))
-
