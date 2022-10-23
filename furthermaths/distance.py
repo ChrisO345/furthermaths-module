@@ -29,7 +29,7 @@ def manhattan_dist(*args):
     :return: manhattan distance
     """
     if len(args) not in [2, 4]:
-        raise ValueError("dist() takes 2 or 4 arguments")
+        raise ValueError("manhattan_dist() takes 2 or 4 arguments")
     if type(args[0]) == set or type(args[0]) == list:
         pos1 = args[0]
         pos2 = args[1]
