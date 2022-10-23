@@ -1,7 +1,8 @@
 """Normal Distribution"""
 
 
-def normal(mu: int or float, variance: int or float, x: int or float) -> float:
+def normal(mu: float, variance: float, x: float) -> float:
+
     """
     :param mu: mean of the data
     :param variance: variance of the data
