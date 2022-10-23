@@ -36,6 +36,13 @@ class Vector:
             return  # TODO add multiplication of 2 vectors
         return Vector(self.dimension, *(i * other for i in self.values))
 
+    def dot(self, other):
+        if not isinstance(other,Vector):
+            return  ValueError("not a vector")
+        if self.dimension!=other.dimension:
+            raise ValueError("Dimensions of vectors should be equal")
+        return sum(i * j for i, j in zip(self.values, other.values))
+
 
 if __name__ == '__main__':
     x = Vector(2, 5, 7)
