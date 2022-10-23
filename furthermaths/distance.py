@@ -39,14 +39,7 @@ def manhattan_dist(*args):
             raise ValueError("manhattan_dist() takes 2 sets with length 2")
     else:
         x1, y1, x2, y2 = args[0], args[1], args[2], args[3]
-    if x1>x2 and y1>y2:
-    	return (x1 - x2, y1 - y2)
-    elif x1<x2 and y1>y2:
-    	return (x2 - x1, y1 - y2)
-    elif x1>x2 and y1<y2:
-    	return (x1 - x2, y2 - y1)
-    else:
-    	return (x2 - x1, y2 - y1)
+    return abs(x1 - x2 + y1 - y2)
 
 
 if __name__ == '__main__':
