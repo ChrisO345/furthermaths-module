@@ -36,7 +36,7 @@ def manhattan_dist(*args):
         if len(pos1) == 2 and len(pos2) == 2:
             x1, y1, x2, y2 = pos1[0], pos1[1], pos2[0], pos2[1]
         else:
-            raise ValueError("dist() takes 2 sets with length 2")
+            raise ValueError("manhattan_dist() takes 2 sets with length 2")
     else:
         x1, y1, x2, y2 = args[0], args[1], args[2], args[3]
     if x1>x2 and y1>y2:
