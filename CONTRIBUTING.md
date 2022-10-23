@@ -24,7 +24,7 @@ section if you are contributing your work.
 - Please create a seperate PR for each file changed
     - this excludes adding to \_\_init\_\_.py files
 - All new files contain only one feature
-- Every new file must be added to \_\_init\_\_.py
+- Every new file must be added to \_\_init\_\_.py within that files directory
 
 
 #### File Naming
