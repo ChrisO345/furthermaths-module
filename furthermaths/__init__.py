@@ -19,3 +19,4 @@ from .rounding import *
 from .square_root import sqrt
 from .surface_area import *
 from .trigonometry import *
+from .gamma import *
