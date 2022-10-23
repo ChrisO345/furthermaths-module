@@ -1,36 +1,6 @@
 """Logarithm Functions -> approximation functions"""
 
 
-def log10(x):
-    """
-    Returns the base 10 logarithm of x.
-
-    :param x: The value to find the logarithm of.
-    :return: The base 10 logarithm of x.
-    """
-    pass
-
-
-def log2(x):
-    """
-    Returns the base 2 logarithm of x.
-
-    :param x: The value to find the logarithm of.
-    :return: The base 2 logarithm of x.
-    """
-    pass
-
-
-def log3(x):
-    """
-    Returns the base 3 logarithm of x.
-
-    :param x: The value to find the logarithm of.
-    :return: The base 3 logarithm of x.
-    """
-    pass
-
-
 def log(x, b):
     """
     Returns the base b logarithm of x.
@@ -67,6 +37,36 @@ def log(x, b):
             prev = start
 
 
+def log10(x):
+    """
+    Returns the base 10 logarithm of x.
+
+    :param x: The value to find the logarithm of.
+    :return: The base 10 logarithm of x.
+    """
+    return log(x, 10)
+
+
+def log2(x):
+    """
+    Returns the base 2 logarithm of x.
+
+    :param x: The value to find the logarithm of.
+    :return: The base 2 logarithm of x.
+    """
+    return log(x, 2)
+
+
+def log3(x):
+    """
+    Returns the base 3 logarithm of x.
+
+    :param x: The value to find the logarithm of.
+    :return: The base 3 logarithm of x.
+    """
+    return log(x, 3)
+
+
 def ln(x):
     """
     Returns the natural logarithm of x.
@@ -74,7 +74,7 @@ def ln(x):
     :param x: The value to find the logarithm of.
     :return: The natural logarithm of x.
     """
-    pass
+    return log(x, 2.71828182846)
 
 
 def log_e(x):
@@ -87,7 +87,6 @@ def log_e(x):
     return ln(x)
 
 
-# TODO complete these functions
 if __name__ == '__main__':
     print(log(32, 2))
     print(log(100, 10))

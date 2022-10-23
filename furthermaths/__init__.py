@@ -11,6 +11,7 @@ from .equality import *
 from .eratosthenes import *
 from .exponential import *
 from .factorial import *
+from .logarithms import *
 from .nth_root import *
 from .perfect_numbers import *
 from .perm_combs import *
@@ -19,3 +20,4 @@ from .rounding import *
 from .square_root import sqrt
 from .surface_area import *
 from .trigonometry import *
+from .volume import *

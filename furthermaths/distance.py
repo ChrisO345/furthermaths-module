@@ -20,7 +20,8 @@ def dist(*args):
     else:
         x1, y1, x2, y2 = args[0], args[1], args[2], args[3]
     return ((x1 - x2)**2 + (y1 - y2)**2)**0.5
-    
+
+
 def manhattan_dist(*args):
     """
     Calculates the manhattan distance between two points
