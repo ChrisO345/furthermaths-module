@@ -17,7 +17,7 @@ def normal(mu: float, variance: float, x: float) -> float:
     return (1/(variance*2*pi) ** 0.5) * e ** (-0.5 * (x-mu/sd)**2)
 
 
-def zscore(mu: int or float, variance: int or float, x: int or float) -> float:
+def zscore(mu: float, variance: float, x: float) -> float:
     """
     :param mu: mean of the data
     :param variance: variance of the data
