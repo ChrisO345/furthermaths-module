@@ -9,7 +9,7 @@ def angle(v1, v2):
     if v1.dimension!=v2.dimension:
         raise ValueError("Dimensions of vectors should be equal")
     dotProduct = sum(i * j for i, j in zip(v1.values, v2.values))
-    modOfVectors = ((sum(i*i for i in v1.values))** 0.5) * ((sum(i*i for i in v2.values)) ** 0.5)
+    modOfVectors = ((sum(i*i for i in v1.values)) * ((sum(i*i for i in v2.values)))) ** 0.5
     x = dotProduct / modOfVectors
     return (acos(x) * 180) / pi
 
