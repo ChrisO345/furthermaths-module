@@ -1,5 +1,5 @@
 """Angle between two vectors"""
-from math import acos,sqrt
+from math import acos
 from Vectors import Vector
 pi = 3.14159265359
 
