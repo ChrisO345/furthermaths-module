@@ -1,6 +1,6 @@
 """Angle between two vectors"""
 from math import acos
-from Vectors import Vector
+from .Vectors import Vector
 pi = 3.14159265359
 
 def angle(v1, v2):
