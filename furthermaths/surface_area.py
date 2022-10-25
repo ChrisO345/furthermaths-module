@@ -106,6 +106,20 @@ def surface_area_cone(radius: float, height: float) -> float:
 # TODO: function for a nth based pyramid, nth based prism, ovular cylinder, cone, ovular cone, ovular torus, torus,
 #  nth based cylinder, nth based polygon
 
+def surface_area_ovular_cylinder(a : int | float, b: int | float, h: int | float) -> float:
+    """
+    Finds the surface area of an ovular cylinder
+    For perimeter of ellipse used the formula: 2 * pi * sqrt((a^2 + b^2) / 2)
+    :param a:
+    :param b:
+    :param h:
+    :return:
+    """
+    if (a < 0 or b<0 or h < 0):
+        raise ValueError("surface_area_ovular_cylinder() only accepts non-negative values")
+    perimeter = 2 * 3.141592653589793 * ((a**2 + b**2) / 2)**0.5
+    return perimeter * h + 2 * 3.141592653589793 * a * b
+
 
 if __name__ == '__main__':
     pass
