@@ -120,6 +120,31 @@ def surface_area_ovular_cylinder(a : int | float, b: int | float, h: int | float
     perimeter = 2 * 3.141592653589793 * ((a**2 + b**2) / 2)**0.5
     return perimeter * h + 2 * 3.141592653589793 * a * b
 
+def surface_area_ellipsoid(a: int | float, b: int | float, c: int | float) -> float:
+    """
+    Finds the approximate surface area of an ellipsoid using Knud Thomsen's formula
+    :param a:
+    :param b:
+    :param c:
+    :return:
+    """
+    if (a < 0 or b < 0 or c < 0):
+        raise ValueError("surface_area_ellipsoid() only accepts non-negative values")
+    p = 1.6075
+    return 4 * 3.141592653589793 * (((a**p*b**p + b**p*c**p + a**p*c**p) / 3)**(1/p))
+
+def surface_area_paraboloid(a: int | float, b: int | float) -> float:
+    """
+    Finds the surface area of a paraboloid
+    a stands for axis length and b stands for cross radius
+    :param a:
+    :param b:
+    :return:
+    """
+    if (a < 0 or b < 0):
+        raise ValueError("surface_area_paraboloid() only accepts non-negative values")
+    return 3.141592653589793 * b**2 + (3.141592653589793 * b)/(6*a**2)*((b**2 + 4*a**2)**(3/2) - b**3)
+
 
 if __name__ == '__main__':
     pass
