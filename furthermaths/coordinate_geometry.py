@@ -1,5 +1,5 @@
 # co ordinate geometry
-from math import sqrt ,inf
+from .square_root import sqrt
 
 
 def get_distance_from_X_axis(x:int,y:int)->int:
@@ -36,4 +36,4 @@ def get_slope(x:list,y:list)->int:
     try:
         return (y[1]-x[1])/(y[0]-x[0])
     except ZeroDivisionError:
-        return inf
+        return float('inf')
