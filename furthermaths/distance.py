@@ -10,7 +10,7 @@ def dist(*args):
     """
     if len(args) not in [2, 4]:
         raise ValueError("dist() takes 2 or 4 arguments")
-    if type(args[0]) == set or type(args[0]) == list:
+    if isinstance(args[0], (set, list)):
         pos1 = args[0]
         pos2 = args[1]
         if len(pos1) == 2 and len(pos2) == 2:
@@ -31,7 +31,7 @@ def manhattan_dist(*args):
     """
     if len(args) not in [2, 4]:
         raise ValueError("manhattan_dist() takes 2 or 4 arguments")
-    if type(args[0]) == set or type(args[0]) == list:
+    if isinstance(args[0], (set, list)):
         pos1 = args[0]
         pos2 = args[1]
         if len(pos1) == 2 and len(pos2) == 2:

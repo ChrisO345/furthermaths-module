@@ -9,7 +9,7 @@ def factorial(n) -> int:
     :param n: any real positive integer
     :return:
     """
-    if type(n) != int or n < 0:
+    if not isinstance(n, int) or n < 0:
         raise ValueError("factorial() must be a positive integer")
     elif n == 0:
         return 1
@@ -23,7 +23,7 @@ def double_factorial(n) -> int:
     :param n: any real positive integer
     :return:
     """
-    if type(n) != int or n < 0:
+    if not isinstance(n, int) or n < 0:
         raise ValueError("double_factorial() must be a positive integer")
     elif n == 0:
         return 1
@@ -40,7 +40,7 @@ def nth_factorial(n, k) -> int:
     :param k: any real positive integer
     :return:
     """
-    if type(n) != int or n < 0:
+    if not isinstance(n, int) or n < 0:
         raise ValueError("nth_factorial() must be a positive integer")
     elif type(k) != int or k < 0:
         raise ValueError("nth_factorial() must be a positive integer")
@@ -58,7 +58,7 @@ def subfactorial(n) -> int:
     :param n:
     :return:
     """
-    if type(n) != int or n < 0:
+    if not isinstance(n, int) or n < 0:
         raise ValueError("subfactorial() must be a positive integer")
     elif n == 0 or n == 1:
         return 0
@@ -79,7 +79,7 @@ def primorial(n) -> int:
     :param n:
     :return:
     """
-    if type(n) != int or n < 0:
+    if not isinstance(n, int) or n < 0:
         raise ValueError("primorial() must be a positive integer")
     if n <= 1:
         return n
@@ -97,7 +97,7 @@ def exponential_factorial(n) -> int:
     :param n:
     :return:
     """
-    if type(n) != int or n < 0:
+    if not isinstance(n, int) or n < 0:
         raise ValueError("exponential_factorial() must be a positive integer")
     elif n == 0:
         return 1
@@ -111,7 +111,7 @@ def hyper_factorial(n) -> int:
     :param n:
     :return:
     """
-    if type(n) != int or n < 0:
+    if not isinstance(n, int) or n < 0:
         raise ValueError("hyper_factorial() must be a positive integer")
     elif n == 0:
         return 1

@@ -28,7 +28,7 @@ def lcm(*args):
     """
     if len(args) == 0:
         raise ValueError("lcm() takes at least 2 arguments")
-    if type(args[0]) == list:
+    if isinstance(args[0], list):
         args = args[0]
     if len(args) == 1:
         raise ValueError("lcm() takes at least 2 arguments")
@@ -61,7 +61,7 @@ def gcd(*args):
     """
     if len(args) == 0:
         raise ValueError("gcd() takes at least 2 arguments")
-    if type(args[0]) == list:
+    if isinstance(args[0], list):
         args = args[0]
     if len(args) == 1:
         raise ValueError("gcd() takes at least 2 arguments")

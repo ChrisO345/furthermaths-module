@@ -11,7 +11,7 @@ def mean(x: list):
     num = len(x)
     total = 0
     for i in x:
-        if type(i) not in [int, float]:
+        if not isinstance(i, (int, float)):
             print(type(i))
             raise ValueError("mean() must be a sequence of numbers")
         total += i
