@@ -6,7 +6,7 @@ def fibonacci(n):
         raise ValueError("n must be a positive integer")
     def fib_memo(n, m):
         """
-        Find the n'th fibonacci number. Uses memoization.
+        Find the n'th fibonacci number. Uses memorization.
 
         :param n: the n'th fibonacci number to find
         :param m: dictionary used to store previous numbers
