@@ -1,7 +1,9 @@
 """Angle between two vectors"""
+
 from math import acos
 from .Vectors import Vector
 pi = 3.14159265359
+
 
 def angle(v1, v2):
     if not isinstance(v1,Vector) or not isinstance(v2,Vector):
@@ -12,6 +14,7 @@ def angle(v1, v2):
     modOfVectors = ((sum(i*i for i in v1.values)) * ((sum(i*i for i in v2.values)))) ** 0.5
     x = dotProduct / modOfVectors
     return (acos(x) * 180) / pi
+
 
 if __name__ == '__main__':
     x = Vector(2, 3, 4)

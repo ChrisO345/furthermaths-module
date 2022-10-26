@@ -12,9 +12,10 @@ packages = [
     "furthermaths",
     "furthermaths.series",
     "furthermaths.complex",
-    "furthermaths.matrices",
+    "furthermaths.physico",
     "furthermaths.vectors",
     "furthermaths.distributions",
+    "furthermaths.financial",
 ]
 
 setup(
