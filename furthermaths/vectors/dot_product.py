@@ -1,5 +1,5 @@
 """Dot Product of 2 Vectors"""
-from Vectors import Vector
+from .Vectors import Vector
 
 def dot(v1, v2):
     if not isinstance(v1,Vector) or not isinstance(v2,Vector):
