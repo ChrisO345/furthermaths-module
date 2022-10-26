@@ -156,3 +156,15 @@ def volume_ellipsoid(a: float, b: float, c: float) -> float:
     :return:
     """
     return 4 / 3 * 3.141592653589793 * a * b * c
+
+def volume_paraboloid(a: int | float, b: int | float) -> float:
+    """
+    Returns the volume of a paraboloid.
+    a stands for axis length and b stands for cross radius
+    :param a:
+    :param b:
+    :return:
+    """
+    if (a < 0 or b < 0):
+        raise ValueError("volume_paraboloid only accepts non-negative values")
+    return 0.5 * 3.141592653589793 * b**2 * a
