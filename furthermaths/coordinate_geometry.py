@@ -2,7 +2,7 @@
 from .square_root import sqrt
 
 
-def get_distance_from_X_axis(x:int,y:int)->int:
+def distance_from_X_axis(x:int,y:int)->int:
     """
     Gives distance of given from x-axis
     """
