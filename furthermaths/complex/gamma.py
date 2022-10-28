@@ -22,7 +22,9 @@ def gamma(x: complex) -> complex:
     :param x: the value to find the gamma function of
     :returns: gamma value
     """
-    if x > 0 and isinstance(x, int):
+    if x < 0 and isinstance(x, int):
+        raise ValueError("The Value will be Undefined")
+    elif x > 0 and isinstance(x, int):
          return factorial(x-1)
     else:
         y = x - 1.0
@@ -35,5 +37,5 @@ def gamma(x: complex) -> complex:
 if __name__ == "__main__":
     print(gamma(2))
     print(gamma(11))
-    print(gamma(1/2))
+    print(gamma(-1/2))
     print(gamma(2/5))
