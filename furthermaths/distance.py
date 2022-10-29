@@ -10,7 +10,7 @@ def dist(*args):
     """
     if len(args) not in [2, 4]:
         raise ValueError("dist() takes 2 or 4 arguments")
-    if type(args[0]) == set or type(args[0]) == list:
+    if isinstance(args[0], (set, list)):
         pos1 = args[0]
         pos2 = args[1]
         if len(pos1) == 2 and len(pos2) == 2:
@@ -20,7 +20,8 @@ def dist(*args):
     else:
         x1, y1, x2, y2 = args[0], args[1], args[2], args[3]
     return ((x1 - x2)**2 + (y1 - y2)**2)**0.5
-    
+
+
 def manhattan_dist(*args):
     """
     Calculates the manhattan distance between two points
@@ -30,7 +31,7 @@ def manhattan_dist(*args):
     """
     if len(args) not in [2, 4]:
         raise ValueError("manhattan_dist() takes 2 or 4 arguments")
-    if type(args[0]) == set or type(args[0]) == list:
+    if isinstance(args[0], (set, list)):
         pos1 = args[0]
         pos2 = args[1]
         if len(pos1) == 2 and len(pos2) == 2:

@@ -145,3 +145,26 @@ def volume_conical_frustum(height: float, radius_1: float, radius_2: float):
     :return:
     """
     return 1 / 3 * 3.141592653589793 * height * ((radius_1 ** 2) + (radius_2 ** 2) + radius_1 * radius_2)
+
+def volume_ellipsoid(a: float, b: float, c: float) -> float:
+    """
+    Returns the volume of an ellipsoid.
+    ellipsoid equation of the form (x/a)^2 + (y/b)^2 + (z/c)^2 = 1
+    :param a:
+    :param b:
+    :param c:
+    :return:
+    """
+    return 4 / 3 * 3.141592653589793 * a * b * c
+
+def volume_paraboloid(a: int | float, b: int | float) -> float:
+    """
+    Returns the volume of a paraboloid.
+    a stands for axis length and b stands for cross radius
+    :param a:
+    :param b:
+    :return:
+    """
+    if (a < 0 or b < 0):
+        raise ValueError("volume_paraboloid only accepts non-negative values")
+    return 0.5 * 3.141592653589793 * b**2 * a
