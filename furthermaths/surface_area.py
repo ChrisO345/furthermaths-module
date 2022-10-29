@@ -102,6 +102,24 @@ def surface_area_cone(radius: float, height: float) -> float:
         raise ValueError("surface_area_cone() only accepts non-negative values")
     return 3.141592653589793 * radius * (radius + (height**2 + radius**2) ** 0.5)
 
+def surface_area_torus(small_circle_radius: float, large_circle_radius: float) -> float:
+    """
+    Finds the surface area of a torus
+
+    :param small_circle_radius:
+    :param large_circle_radius:
+    :return:
+    """
+    if small_circle_radius < 0 or large_circle_radius < 0:
+        raise ValueError("surface_area_torus() only accepts non-negative values")
+    if large_circle_radius > small_circle_radius:
+    	area = 4*3.141592653589793**2 * large_circle_radius * small_circle_radius
+    else:
+    	raise ValueError("large circle radius should be larger than small circle radius")
+    return area
+
+
+
 
 # TODO: function for a nth based pyramid, nth based prism, ovular cylinder, cone, ovular cone, ovular torus, torus,
 #  nth based cylinder, nth based polygon
