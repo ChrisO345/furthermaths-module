@@ -1,7 +1,6 @@
 """Trigonometric Functions"""
 from .factorial import factorial
 from .angle_units import radians
-from .square_root import sqrt
 
 
 def sin(deg: float, accuracy: int = 18, rounded_values_count: int = 10) -> float:
@@ -37,7 +36,7 @@ def cos(deg: float, accuracy: int = 18, rounded_values_count: int = 10) -> float
     sine = sin(deg, accuracy, rounded_values_count)
     sine = sine ** 2
     sine = 1 - sine
-    return round(sqrt(sine), rounded_values_count)
+    return round(sine**0.5, rounded_values_count)
 
 
 def tan(deg: float, accuracy: int = 18, rounded_values_count: int = 10) -> float:

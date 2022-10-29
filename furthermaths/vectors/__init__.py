@@ -1,3 +1,1 @@
-from Vectors import Vector
-
-
+from .Vectors import Vector
