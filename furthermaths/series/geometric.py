@@ -5,8 +5,8 @@ def is_geometric(series: list) -> bool:
     """
     Checks to see if the values in a list follow a geometric progression
 
-    :param series: Geaometric progression
-    :return: True if the values follow an geomtric progression, False otherwise
+    :param series: Geometric progression
+    :return: True if the values follow an geometric progression, False otherwise
     """
     if not isinstance(series, list):
         raise ValueError("Input series is not valid, valid series - [2, 3, 5]")
@@ -64,7 +64,7 @@ def geometric_sum(n: int, start: float | int, ratio: float | int) -> float:
         raise ValueError("Nth term must be greater than 0")
     if ratio == 0 or ratio == 1:
         raise ValueError("Ratio of geometric progression cannot be 0 or 1")
-    return start * ((pow(ratio, n) - 1) / (ratio - 1))
+    return start * (ratio**n - 1) / (ratio - 1))
 
 def geometric_sum_infinite(start: float | int, ratio: float | int) -> float:
     """
@@ -101,7 +101,7 @@ def geometric_nth_term(n: int, start: float | int, ratio: float | int) -> float:
         raise ValueError("Nth term must be greater than 0")
     if ratio == 0 or ratio == 1:
         raise ValueError("Ratio of geometric progression cannot be 0 or 1")
-    return start * pow(ratio, n - 1)
+    return start * ratio**(n - 1)
 
 def geometric_first_term(n: int, end: float | int, ratio: float | int) -> float:
     """
@@ -122,7 +122,7 @@ def geometric_first_term(n: int, end: float | int, ratio: float | int) -> float:
         raise ValueError("Nth term must be greater than 0")
     if ratio == 0 or ratio == 1:
         raise ValueError("Ratio of geometric progression cannot be 0 or 1")
-    return end / pow(ratio, n - 1)
+    return end / ratio**(n - 1)
 
 def geometric_ratio(n: int, start: float | int, end: float | int) -> float:
     """
@@ -141,4 +141,4 @@ def geometric_ratio(n: int, start: float | int, end: float | int) -> float:
         raise ValueError("End term must be a real number")
     if n < 1:
         raise ValueError("Nth term must be greater than 0")
-    return pow((end / start), n - 1)
+    return (end / start)**(n - 1)
