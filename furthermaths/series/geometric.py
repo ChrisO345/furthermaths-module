@@ -66,6 +66,22 @@ def geometric_sum(n: int, start: float | int, ratio: float | int) -> float:
         raise ValueError("Ratio of geometric progression cannot be 0 or 1")
     return start * ((pow(ratio, n) - 1) / (ratio - 1))
 
+def geometric_sum_infinite(start: float | int, ratio: float | int) -> float:
+    """
+    Finds the sum of an geometric progression
+
+    :param start: The first term in the series
+    :param ratio: Common ratio of two consecutive term of progression
+    :return: The sum of the series
+    """
+    if not isinstance(start, (int, float)):
+        raise ValueError("Start term must be a real number")
+    if not isinstance(ratio, (int, float)):
+        raise ValueError("Ratio must be a real number")
+    if ratio < 0 or ratio > 1:
+        raise ValueError("Ratio of infinite geometric progression must be between 0 and 1 (exclusive) to calculate the sum.")
+    return start / (1 - ratio)
+
 def geometric_nth_term(n: int, start: float | int, ratio: float | int) -> float:
     """
     Finds the nth term of an geometric progression
