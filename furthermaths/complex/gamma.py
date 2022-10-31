@@ -1,19 +1,18 @@
 """Gamma Function"""
 
-_table =  ( 1.00000000000000000000, 0.57721566490153286061, -0.65587807152025388108,
-         -0.04200263503409523553, 0.16653861138229148950, -0.04219773455554433675,
-         -0.00962197152787697356, 0.00721894324666309954, -0.00116516759185906511,
-         -0.00021524167411495097, 0.00012805028238811619, -0.00002013485478078824,
-         -0.00000125049348214267, 0.00000113302723198170, -0.00000020563384169776,
-          0.00000000611609510448, 0.00000000500200764447, -0.00000000118127457049,
-          0.00000000010434267117, 0.00000000000778226344, -0.00000000000369680562,
-          0.00000000000051003703, -0.00000000000002058326, -0.00000000000000534812,
-          0.00000000000000122678, -0.00000000000000011813, 0.00000000000000000119,
-          0.00000000000000000141, -0.00000000000000000023, 0.00000000000000000002
-       )
+from cmath import sin, sqrt, exp
 
-def factorial(n):
-     return 1 if (n==1 or n==0) else n * factorial(n - 1)
+_table = (676.5203681218851
+    ,-1259.1392167224028
+    ,771.32342877765313
+    ,-176.61502916214059
+    ,12.507343278686905
+    ,-0.13857109526572012
+    ,9.9843695780195716e-6
+    ,1.5056327351493116e-7
+    )
+
+PI = 3.141592653589793
 
 def gamma(x: complex) -> complex:
     """
@@ -22,20 +21,25 @@ def gamma(x: complex) -> complex:
     :param x: the value to find the gamma function of
     :returns: gamma value
     """
-    if x < 0 and isinstance(x, int):
+    if x.real < 0 and isinstance(x.real, int):
         raise ValueError("The Value will be Undefined")
-    elif x > 0 and isinstance(x, int):
-         return factorial(x-1)
+    x = complex(x)
+    if x.real < 0.5:
+        z = PI / (sin(PI * x) * gamma(1 - x)) 
     else:
-        y = x - 1.0
-        sum = _table[-1]
-        for n in _table[-2::-1]:
-            sum = sum * y + n
-        return 1.0 / sum
+        x = x - 1
+        y = 0.99999999999980993
+        for (i, pval) in enumerate(_table):
+            y += pval / (x + i + 1)
+        t = x + len(_table) - 0.5
+        z = sqrt(2 * PI) * t ** (x + 0.5) * exp(-t) * y
 
+    if abs(z.imag) <= 0.0000001:
+        z = z.real
+    return z
 
 if __name__ == "__main__":
-    print(gamma(2))
+    print(gamma(-4.5))
     print(gamma(11))
     print(gamma(-1/2))
     print(gamma(2/5))
