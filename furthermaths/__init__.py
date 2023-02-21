@@ -18,6 +18,7 @@ from .perm_combs import *
 from .prime_factors import *
 from .rounding import *
 from .square_root import sqrt
+from .standard_deviation import *
 from .surface_area import *
 from .trigonometry import *
 from .volume import *
